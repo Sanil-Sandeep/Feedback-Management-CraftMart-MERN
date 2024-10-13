@@ -19,7 +19,9 @@ const feedbackSchema = mongoose.Schema(
             
         }
     },
-    
+    {
+        timestamps: true,
+    }
 );
 
 export const Feedback = mongoose.model('Feedback', feedbackSchema);
