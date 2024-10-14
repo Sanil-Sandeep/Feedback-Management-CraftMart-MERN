@@ -29,7 +29,7 @@ app.get('/', (request, response) => {
     return response.status(234).send('Welcome to mern stack tutorial')
 });
 
-
+app.use('/feedbacks', feedbackRoute);
 
 mongoose
    .connect(mongoDBURL)
