@@ -41,6 +41,20 @@ router.get("/", async (request, response) => {
   }
 });
 
+//route for get one feedback from database by id
+router.get("/:id", async (request, response) => {
+  try {
+    const { id } = request.params;
+
+    const feedback = await Feedback.findById(id);
+
+    return response.status(200).json(feedback);
+  } catch (error) {
+    console.log(error.message);
+    response.status(500).send({ message: error.message });
+  }
+});
+
 
 
 export default router;
