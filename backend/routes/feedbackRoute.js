@@ -26,6 +26,21 @@ router.post("/", async (request, response) => {
   }
 });
 
+//route for get all feedback from database
+router.get("/", async (request, response) => {
+  try {
+    const feedbacks = await Feedback.find({});
+
+    return response.status(200).json({
+      count: feedbacks.length,
+      data: feedbacks,
+    });
+  } catch (error) {
+    console.log(error.message);
+    response.status(500).send({ message: error.message });
+  }
+});
+
 
 
 export default router;
