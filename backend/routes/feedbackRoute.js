@@ -3,6 +3,29 @@ import { Feedback } from '../models/feedbackModel.js';
 
 const router = express.Router();
 
+//Route for create a new feedback
+router.post("/", async (request, response) => {
+  try {
+    if (!request.body.name || !request.body.email || !request.body.message) {
+      return response.status(400).send({
+        message: "Send all required fields: name, email, message",
+      });
+    }
+    const newFeedback = {
+      name: request.body.name,
+      email: request.body.email,
+      message: request.body.message,
+    };
+
+    const feedback = await Feedback.create(newFeedback);
+
+    return response.status(201).send(feedback);
+  } catch (error) {
+    console.log(error.message);
+    response.status(500).send({ message: error.message });
+  }
+});
+
 
 
 export default router;
