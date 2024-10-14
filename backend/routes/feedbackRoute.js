@@ -80,6 +80,36 @@ router.put("/:id", async (request, response) => {
   }
 });
 
+//route for reply feedback
+router.put("/:id", async (request, response) => {
+  try {
+    if (
+      !request.body.name ||
+      !request.body.email ||
+      !request.body.message ||
+      !request.body.reply
+    ) {
+      return response.status(400).send({
+        message: "Send all required fields: name, email, message",
+      });
+    }
+
+    const { id } = request.params;
+
+    const result = await Feedback.findByIdAndReply(id, request.body);
+
+    if (!result) {
+      return response.status(404).json({ message: "Feedback not found" });
+    }
+    return response
+      .status(200)
+      .send({ message: "Feedback updated successfully" });
+  } catch (error) {
+    console.log(error.message);
+    response.status(500).send({ message: error.message });
+  }
+});
+
 
 
 export default router;
