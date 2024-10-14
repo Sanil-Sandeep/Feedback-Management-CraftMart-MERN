@@ -110,6 +110,23 @@ router.put("/:id", async (request, response) => {
   }
 });
 
+//route for delete a feedback
+router.delete("/:id", async (request, response) => {
+  try {
+    const { id } = request.params;
 
+    const result = await Feedback.findByIdAndDelete(id);
+
+    if (!result) {
+      return response.status(404).json({ message: "Feedback not found" });
+    }
+    return response
+      .status(200)
+      .send({ message: "Feedback deleted successfully" });
+  } catch (error) {
+    console.log(error.message);
+    response.status(500).send({ message: error.message });
+  }
+});
 
 export default router;
