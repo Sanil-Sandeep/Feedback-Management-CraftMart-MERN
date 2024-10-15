@@ -70,7 +70,58 @@ const CreateFeedback = () => {
       });
   };
 
- 
+  return (
+    <div style={styles.container}>
+      <BackButton />
+      {loading ? <Spinner /> : null}
+      <div style={styles.form}>
+        <h1 style={styles.heading}>Add Your Feedback</h1>
+
+        <div style={{ marginBottom: '1rem' }}>
+          <label style={styles.label} htmlFor="name">Name:</label>
+          <input
+            type="text"
+            id="name"
+            value={name}
+            onChange={(e) => setName(e.target.value)}
+            style={styles.input}
+          />
+           {errors.name && <div style={styles.error}>{errors.name}</div>}
+        </div>
+
+        <div style={{ marginBottom: '1rem' }}>
+          <label style={styles.label} htmlFor="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            style={styles.input}
+          />
+           {errors.email && <div style={styles.error}>{errors.email}</div>}
+        </div>
+
+        <div style={{ marginBottom: '1rem' }}>
+          <label style={styles.label} htmlFor="message">Feedback:</label>
+          <textarea
+            id="message"
+            value={message}
+            onChange={(e) => setMessage(e.target.value)}
+            style={styles.textarea}
+            rows="7" // Adjust rows as needed for height
+          />
+          {errors.message && <div style={styles.error}>{errors.message}</div>}
+        </div>
+
+        <button style={styles.button} onClick={handleSaveFeedback}>
+          Submit
+        </button>
+      </div>
+    </div>
+  );
+};
+
+
 
 
 export default CreateFeedback;
