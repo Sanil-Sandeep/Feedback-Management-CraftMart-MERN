@@ -74,6 +74,14 @@ const styles = {
     boxShadow: '0 4px 8px rgba(0, 0, 0, 9.2)', // Adjust shadow here
     fontFamily: 'Poppins, sans-serif',
   },
+  heading: {
+    fontSize: '24px',
+    margin: '16px 0',
+    textAlign: 'center',
+    fontFamily: 'Poppins, sans-serif',
+    fontWeight: 'bold',
+    color: '#330D0F', // Header font color
+  },
   
 };
 
