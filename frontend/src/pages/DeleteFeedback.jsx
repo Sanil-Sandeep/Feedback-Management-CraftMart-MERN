@@ -61,6 +61,19 @@ const styles = {
     minHeight: '100vh',
     fontFamily: 'Poppins, sans-serif',
   },
+  form: {
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    borderRadius: '20px', // Tailwind's rounded-xl
+    width: '600px',
+    padding: '32px',
+    margin: 'auto',
+    marginTop: '86px',
+    backgroundColor: '#FFFFFF',
+    boxShadow: '0 4px 8px rgba(0, 0, 0, 9.2)', // Adjust shadow here
+    fontFamily: 'Poppins, sans-serif',
+  },
   
 };
 
