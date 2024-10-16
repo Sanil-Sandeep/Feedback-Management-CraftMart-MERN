@@ -28,6 +28,32 @@ const DeleteFeedback = () => {
       });
   };
 
-  
+  return (
+    <div style={styles.container}>
+      <BackButton />
+      {loading ? <Spinner /> : null}
+      <div style={styles.form}>
+        <h3 style={styles.heading}>Do You Want To Delete Your Feedback?</h3>
+
+        <button
+          style={styles.buttonDelete}
+          onClick={handleDeleteFeedback}
+        >
+          Yes, Delete it
+        </button>
+        <button
+          style={styles.buttonCancel}
+          onClick={() => {  
+            window.location.href = '/feedbacks/full';  // Redirect to the link
+          }}
+        >
+          No
+        </button>
+      </div>
+    </div>
+  );
+};
+
+
 
 export default DeleteFeedback;
