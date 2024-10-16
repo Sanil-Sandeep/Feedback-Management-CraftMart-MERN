@@ -54,6 +54,14 @@ const DeleteFeedback = () => {
   );
 };
 
-
+const styles = {
+  container: {
+    padding: '16px',
+    backgroundColor: '#F1EEDA',
+    minHeight: '100vh',
+    fontFamily: 'Poppins, sans-serif',
+  },
+  
+};
 
 export default DeleteFeedback;
