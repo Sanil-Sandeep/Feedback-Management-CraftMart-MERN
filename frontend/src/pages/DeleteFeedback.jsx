@@ -82,7 +82,30 @@ const styles = {
     fontWeight: 'bold',
     color: '#330D0F', // Header font color
   },
-  
+  buttonDelete: {
+    padding: '16px',
+    backgroundColor: '#330D0F', // Updated color
+    color: '#ffffff', // Tailwind's text-white
+    margin: '16px',
+    width: '100%',
+    border: 'none',
+    borderRadius: '48px', // Added border radius
+    cursor: 'pointer',
+    fontFamily: 'Poppins, sans-serif',
+    fontWeight: 'bold',
+  },
+  buttonCancel: {
+    padding: '16px',
+    backgroundColor: '#F1EEDA', // Updated color
+    color: '#330D0F', // Text color
+    margin: '16px',
+    width: '100%',
+    border: '2px solid #330D0F', // Border color
+    borderRadius: '48px', // Added border radius
+    cursor: 'pointer',
+    fontFamily: 'Poppins, sans-serif',
+    fontWeight: 'bold',
+  },
 };
 
 export default DeleteFeedback;
