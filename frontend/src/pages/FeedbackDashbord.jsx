@@ -200,6 +200,130 @@ const FeedbackDashboard = () => {
   );
 };
 
-
+const styles = {
+  page: {
+    backgroundColor: '#F1EEDA',
+    minHeight: '100vh',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    padding: '1rem',
+    fontFamily: 'Poppins, sans-serif',
+  },
+  container: {
+    width: '100%',
+    maxWidth: '1200px',
+    margin: '0 auto',
+    fontFamily: 'Poppins, sans-serif',
+  },
+  header: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    fontFamily: 'Poppins, sans-serif',
+    color: '#330D0F', 
+    fontWeight: 'bold',
+  },
+  title: {
+    fontSize: '1.875rem',
+    margin: '2rem 0',
+    fontFamily: 'Poppins, sans-serif',
+  },
+  addIcon: {
+    fontSize: '2rem',
+    fontFamily: 'Poppins, sans-serif',
+  },
+  reportButton: {
+    marginLeft: '0.1rem',
+    marginBottom: '2rem',
+    padding: '0.5rem 1rem',
+    fontSize: '0.88rem',
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+    backgroundColor: '#330D0F',
+    border: '2px solid #330D0F',
+    borderRadius: '0.25rem',
+    cursor: 'pointer',
+    fontFamily: 'Poppins, sans-serif',
+  },
+  searchContainer: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    alignItems: 'center',
+    marginBottom: '1rem',
+  },
+  searchInput: {
+    width: '300px',
+    padding: '0.5rem',
+    fontSize: '0.8rem',
+    borderRadius: '0.25rem',
+    border: '3px solid #330D0F',
+    fontFamily: 'Poppins, sans-serif',
+  },
+  searchButton: {
+    marginLeft: '0.5rem',
+    padding: '0.5rem 1rem',
+    fontSize: '0.88rem',
+    fontWeight: 'bold',
+    color: '#FFFFFF',
+    backgroundColor: '#330D0F',
+    border: '2px solid #330D0F',
+    borderRadius: '0.25rem',
+    cursor: 'pointer',
+    fontFamily: 'Poppins, sans-serif',
+  },
+  tableWrapper: {
+    width: '100%',
+    overflowX: 'auto',
+  },
+  table: {
+    width: '100%',
+    borderSpacing: '0.5rem',
+    fontFamily: 'Poppins, sans-serif',
+    tableLayout: 'fixed', // Ensures columns are fixed in width
+  },
+  th: {
+    borderTop: '3px solid #330D0F',
+    borderBottom: '3px solid #330D0F',
+    borderLeft: '3px solid #330D0F',
+    borderRight: '3px solid #F1EEDA',
+    backgroundColor: '#4A1416',
+    color: '#FFFFFF',
+    height: '3rem',
+    fontFamily: 'Poppins, sans-serif',
+    overflow: 'hidden', // Hide overflow
+    whiteSpace: 'nowrap', // Prevent text from wrapping
+    textOverflow: 'ellipsis', // Add ellipsis if content is too long
+  },
+  thLast: {
+    borderRight: '3px solid #330D0F',
+    fontFamily: 'Poppins, sans-serif',
+  },
+  td: {
+    border: '3px solid #330D0F',
+    textAlign: 'center',
+    fontFamily: 'Poppins, sans-serif',
+    wordWrap: 'break-word', // Break long words to fit within the cell
+    overflow: 'hidden', // Hide overflow
+    textOverflow: 'ellipsis', // Add ellipsis if content is too long
+  },
+  operations: {
+    display: 'flex',
+    justifyContent: 'center',
+    gap: '1rem',
+    fontFamily: 'Poppins, sans-serif',
+  },
+  icon: {
+    fontSize: '1.5rem',
+    fontFamily: 'Poppins, sans-serif',
+  },
+  noResults: {
+    textAlign: 'center',
+    fontFamily: 'Poppins, sans-serif',
+    color: '#330D0F',
+    fontSize: '1.25rem',
+    marginTop: '2rem',
+  },
+};
 
 export default FeedbackDashboard;
