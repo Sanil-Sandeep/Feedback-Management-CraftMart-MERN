@@ -66,6 +66,121 @@ const FullFeedback = () => {
   );
 };
 
+const styles = {
+  page: {
+    backgroundColor: '#F1EEDA',
+    minHeight: '100vh',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    alignItems: 'flex-start',
+    padding: '1rem',
+    fontFamily: 'Poppins, sans-serif',
+  },
+  container: {
+    width: '100%',
+    maxWidth: '1200px',
+    margin: '0 auto',
+    fontFamily: 'Poppins, sans-serif',
+  },
+  header: {
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'center',
+    alignItems: 'center',
+    gap: '1rem',
+    marginBottom: '2rem',
+    position: 'relative',
+    left: '50%',
+    transform: 'translateX(-50%)',
+    width: 'auto',
+  },
+  title: {
+    fontSize: '1.9rem',
+    margin: 0,
+    fontFamily: 'Poppins, sans-serif',
+    fontWeight: 'bold',
+  },
+  button: {
+    backgroundColor: '#330D0F',
+    color: '#F1EEDA',
+    fontFamily: 'Poppins, sans-serif',
+    padding: '5px 10px',
+    border: 'none',
+    borderRadius: '40px',
+    cursor: 'pointer',
+    fontWeight: 'bold',
+  },
+  feedbackSection: {
+    width: '100%',
+    fontFamily: 'Poppins, sans-serif',
+    display: 'flex',
+    flexWrap: 'wrap',
+    gap: '1rem',
+  },
+  feedbackWrapper: {
+    flex: '0 0 calc(33.333% - 1rem)', // Ensures exactly 3 items per row with spacing
+    boxSizing: 'border-box', // Includes padding and border in width
+    display: 'flex',
+    flexDirection: 'column',
+  },
+  feedbackBox: {
+    border: '3px solid #330D0F',
+    borderRadius: '15px',
+    padding: '1rem',
+    color: '#F1EEDA',
+    backgroundColor: '#330D0F',
+    marginBottom: '0.5rem',
+    width: '300px', // Fixed width
+    minHeight: '80px', // Minimum height
+    display: 'flex',
+    flexDirection: 'column',
+    boxShadow: '0px 7px 8px rgba(0, 0, 0, 8.3)', // Shadow effect only below
+  },
+  replyBox: {
+    border: '3px solid #330D0F',
+    borderRadius: '15px',
+    padding: '1rem',
+    backgroundColor: '#F1EEDA',
+    marginBottom: '5rem',
+    width: '300px', // Fixed width
+    minHeight: '80px', // Minimum height
+    display: 'flex',
+    flexDirection: 'column',
+    marginLeft: '4rem',
+    boxShadow: '0px 7px 8px rgba(0, 0, 0, 4.3)', // Shadow effect only below
+  },
+  feedbackText: {
+    fontWeight: 'bold',
+    marginBottom: '0.2rem',
+  },
+  feedbackMessage: {
+    marginBottom: '1rem',
+    fontSize: '13px',
+    overflowWrap: 'break-word', // Ensures text wraps within the box
+  },
+  replyText: {
+    fontWeight: 'bold',
+    marginBottom: '0.2rem',
+  },
+  replyMessage: {
+    marginBottom: '1rem',
+    fontSize: '13px',
+    overflowWrap: 'break-word', // Ensures text wraps within the box
+  },
+  actions: {
+    fontSize: '15px',
+    display: 'flex',
+    justifyContent: 'flex-start',
+    gap: '0.6rem',
+    marginBottom: '1rem',
+    marginLeft: '12rem',
+  },
+  link: {
+    color: '#330D0F',
+    textDecoration: 'none',
+    fontWeight: 'bold',
+  },
+};
 
 
 export default FullFeedback;
